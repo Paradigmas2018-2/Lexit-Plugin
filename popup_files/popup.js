@@ -5,6 +5,7 @@ let buttonScenario = document.getElementById('buttonScenario');
 let buttonLexicon = document.getElementById('buttonLexicon');
 let buttonAddSinonimo = document.getElementById('addSinonimo');
 let buttonDelSinonimo = document.getElementById('delSinonimo');
+let buttonSubmitLexicon = document.getElementById('submitLexicon');
 
 buttonScenario.onclick = function(element) {
   document.getElementById("scenario").style.display = "block";
@@ -24,28 +25,34 @@ buttonDelSinonimo.onclick = function(element) {
   delSinonimo()
 }
 
-function TestarBranco(form) {
-  nome  = form.nome.value;
-  nocao = form.nocao.value;
+buttonSubmitLexicon.onclick = function(element) {
+  TestarBranco()
+}
+
+function TestarBranco() {
+
+  var form = document.forms[1];
+  var nome  = form.nome.value;
+  var nocao = form.nocao.value;
 
   if( nome == "" )
     {
-	  alert (" Por favor, forne�a o NOME do l�xico.\n O campo NOME � de preenchimento obrigat�rio.");
+	  alert (" Por favor, forneça o NOME do léxico.\n O campo NOME é de preenchimento obrigatório.");
       form.nome.focus();
       return false;
     }else{
 		padrao = /[\\\/\?"<>:|]/;
-		nOK = padrao.exec(nome);
+		var nOK = padrao.exec(nome);
 		if (nOK)
 		{
-			window.alert ("O nome do l�xico n�o pode conter nenhum dos seguintes caracteres:   / \\ : ? \" < > |");
+			window.alert ("O nome do léxico não pode conter nenhum dos seguintes caracteres:   / \\ : ? \" < > |");
 			form.nome.focus();
 			return false;
 		}
 	}
 
    if( nocao == "" )
-    { alert (" Por favor, forne�a a NO��O do l�xico.\n O campo NO��O � de preenchimento obrigat�rio.");
+    { alert (" Por favor, forneça a NOÇÂO do léxico.\n O campo NOÇÂO É de preenchimento obrigatório.");
       form.nocao.focus();
       return false;
     }
