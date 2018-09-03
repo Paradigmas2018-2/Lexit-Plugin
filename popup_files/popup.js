@@ -19,7 +19,7 @@ changeColor.onclick = function(element) {
       );
    });
  };
-
-var e = document.createElement('span');
-e.innerHTML = htmldata;
-element.appendChild(e);
+// 
+// var e = document.createElement('span');
+// e.innerHTML = htmldata;
+// element.appendChild(e);
