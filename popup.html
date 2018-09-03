@@ -13,7 +13,8 @@
       }
 
       body {
-        width: 100vw;
+        width: 780px;
+        max-width: 750px;
         height: 100vh;
       }
 
@@ -25,14 +26,20 @@
       }
 
       .input-group {
-        padding: 5px;
+        /* padding: 5px; */
       }
+
+      /* .container {
+        margin: 0 auto;
+      } */
+
       .bar {
         width:100%;
         overflow:hidden;
         display:inline-block;
         width:auto;
       }
+
       .bar .bar-item {
         padding:8px 16px;
         float:left;
@@ -41,7 +48,6 @@
         display:block;
         outline:0
       }
-
 
     </style>
   </head>
@@ -101,55 +107,55 @@
         </div>
         <div id="lexicon" style="display:none">
           <h1>Léxico</h1>
-          <form action="?id_projeto=<?=$id_projeto?>" method="post" onSubmit="return(doSubmit());">
-        <table>
-            <tr>
-                <td>Nome:</td>
-                <td><input size="48" name="nome" type="text" value=""></td>
-            </tr>
-            <tr valign="top">
-                <td>Sinônimos:</td>
-                 <td width="0%">
-                      <input name="sinonimo" size="15" type="text" maxlength="50">
-                         &nbsp;&nbsp;&nbsp;&nbsp;<input id="addSinonimo" type="button" value="Adicionar">
-                         &nbsp;&nbsp;<input id="delSinonimo" type="button" value="Remover">&nbsp;
-                </td>
-            </tr>
-            <tr>
-               <td>
-               </td>
-               <td width="100%">
-                      <left><select multiple name="listSinonimo[]"  style="width: 400px;"  size="5"></select></left>                      <br>
-               </td>
-           <tr>
-           </tr>
-          </tr>
-          <tr>
-                <td>Noção:</td>
-                <td><textarea cols="51" name="nocao" rows="3" WRAP="SOFT"></textarea></td>
-            </tr>
-            <tr>
-                <td>Impacto:</td>
-                <td><textarea  cols="51" name="impacto" rows="3" WRAP="SOFT"></textarea></td>
-            </tr>
-            <tr>
-                <td>Classificação:</td>
-                <td>
-                    <SELECT id='classificacao' name='classificacao' size=1 width="300">
-                     <OPTION value='sujeito' selected>Sujeito</OPTION>
-                     <OPTION value='objeto'>Objeto</OPTION>
-                     <OPTION value='verbo'>Verbo</OPTION>
-                     <OPTION value='estado'>Estado</OPTION>
-                    </SELECT>
-                </td>
-            </tr>
-            <tr>
-                <td align="center" colspan="2" height="60">
-                <input id="submitLexicon" name="submit" type="submit" value="Adicionar Símbolo"><BR><BR>
-                </td>
-            </tr>
-        </table>
-        </form>
+          <form method="post" onSubmit="">
+            <table>
+                <tr>
+                    <td>Nome:</td>
+                    <td><input size="48" name="nome" type="text" value=""></td>
+                </tr>
+                <tr valign="top">
+                    <td>Sinônimos:</td>
+                     <td width="0%">
+                          <input name="sinonimo" size="15" type="text" maxlength="50">
+                             &nbsp;&nbsp;&nbsp;&nbsp;<input id="addSinonimo" type="button" value="Adicionar">
+                             &nbsp;&nbsp;<input id="delSinonimo" type="button" value="Remover">&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                   <td>
+                   </td>
+                   <td width="100%">
+                          <left><select multiple name="listSinonimo[]"  style="width: 400px;"  size="5"></select></left>                      <br>
+                   </td>
+               <tr>
+               </tr>
+              </tr>
+              <tr>
+                    <td>Noção:</td>
+                    <td><textarea cols="51" name="nocao" rows="3" WRAP="SOFT"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Impacto:</td>
+                    <td><textarea  cols="51" name="impacto" rows="3" WRAP="SOFT"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Classificação:</td>
+                    <td>
+                        <SELECT id='classificacao' name='classificacao' size=1 width="300">
+                         <OPTION value='sujeito' selected>Sujeito</OPTION>
+                         <OPTION value='objeto'>Objeto</OPTION>
+                         <OPTION value='verbo'>Verbo</OPTION>
+                         <OPTION value='estado'>Estado</OPTION>
+                        </SELECT>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2" height="60">
+                    <input id="submitLexicon" name="submit" type="submit" value="Adicionar Símbolo"><BR><BR>
+                    </td>
+                </tr>
+            </table>
+          </form>
         </div>
       </div>
     </div>
