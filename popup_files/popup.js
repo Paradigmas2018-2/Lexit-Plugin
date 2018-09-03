@@ -25,9 +25,9 @@ buttonDelSinonimo.onclick = function(element) {
   delSinonimo()
 }
 
-buttonSubmitLexicon.onclick = function(element) {
-  TestarBranco()
-}
+// buttonSubmitLexicon.onclick = function(element) {
+//   TestarBranco()
+// }
 
 function TestarBranco() {
 

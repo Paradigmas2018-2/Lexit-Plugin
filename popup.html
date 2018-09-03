@@ -48,6 +48,11 @@
         display:block;
         outline:0
       }
+      .button-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
 
     </style>
   </head>
@@ -100,7 +105,7 @@
                 </div>
               </tr>
               <tr>
-                <button type="button" style="width: 25%; margin: 10px;" class="btn btn-default" aria-label="Left Align">
+                <button type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
                   <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Adicionar Cenário
                 </button>
               </tr>
@@ -111,51 +116,51 @@
           <h1>Léxico</h1>
           <form method="post" onSubmit="">
             <table>
-                <tr>
-                    <td>Nome:</td>
-                    <td><input size="48" name="nome" type="text" value=""></td>
-                </tr>
-                <tr valign="top">
-                    <td>Sinônimos:</td>
-                     <td width="0%">
-                          <input name="sinonimo" size="15" type="text" maxlength="50">
-                             &nbsp;&nbsp;&nbsp;&nbsp;<input id="addSinonimo" type="button" value="Adicionar">
-                             &nbsp;&nbsp;<input id="delSinonimo" type="button" value="Remover">&nbsp;
-                    </td>
-                </tr>
-                <tr>
-                   <td>
-                   </td>
-                   <td width="100%">
-                          <left><select multiple name="listSinonimo[]"  style="width: 400px;"  size="5"></select></left>                      <br>
-                   </td>
-               <tr>
-               </tr>
+              <tr>
+                <div class="input-group">
+                  <input type="text" name="nome" size="51" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+                </div>
               </tr>
               <tr>
-                    <td>Noção:</td>
-                    <td><textarea cols="51" name="nocao" rows="3" WRAP="SOFT"></textarea></td>
+                <div class="input-group">
+                  <input size="51" type="text" name="sinonimo" class="form-control" placeholder="Sinônimos" aria-describedby="basic-addon1">
+                </div>
+                <div class="button-list">
+                  <button id="addSinonimo" type="button" style="width: 50%; margin: 5px;" class="btn btn-success" aria-label="">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Adicionar
+                  </button>
+                  <button id="delSinonimo" type="button" style="width: 50%; margin: 5px;" class="btn btn-danger" aria-label="">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remover
+                  </button>
+                </div>
+              </tr>
+              <tr>
+                 <select multiple name="listSinonimo[]" style="width: 450px;"  size="5"></select>
+               </tr>
+               <tr>
+                    <div class="input-group">
+                      <textarea type="text" name="nocao"cols="51" size="51" rows="3" class="form-control" placeholder="Noção" aria-describedby="basic-addon1"></textarea>
+                    </div>
                 </tr>
-                <tr>
-                    <td>Impacto:</td>
-                    <td><textarea  cols="51" name="impacto" rows="3" WRAP="SOFT"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Classificação:</td>
-                    <td>
-                        <SELECT id='classificacao' name='classificacao' size=1 width="300">
-                         <OPTION value='sujeito' selected>Sujeito</OPTION>
-                         <OPTION value='objeto'>Objeto</OPTION>
-                         <OPTION value='verbo'>Verbo</OPTION>
-                         <OPTION value='estado'>Estado</OPTION>
-                        </SELECT>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" colspan="2" height="60">
-                    <input id="submitLexicon" name="submit" type="submit" value="Adicionar Símbolo"><BR><BR>
-                    </td>
-                </tr>
+              <tr>
+                  <div class="input-group">
+                    <textarea type="text" name="impacto"cols="51" size="51" rows="3" class="form-control" placeholder="Impacto" aria-describedby="basic-addon1"></textarea>
+                  </div>
+              </tr>
+              <tr>
+                <span>Classificação</span>
+                <select id='classificacao' name='classificacao' size=1 width="300" placeholder="Classificação">
+                 <option value='sujeito' selected>Sujeito</option>
+                 <option value='objeto'>Objeto</option>
+                 <option value='verbo'>Verbo</option>
+                 <option value='estado'>Estado</option>
+               </select>
+              </tr>
+              <tr>
+                <button type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
+                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Adicionar Léxico
+                </button>
+              </tr>
             </table>
           </form>
         </div>
