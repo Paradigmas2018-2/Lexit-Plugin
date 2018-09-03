@@ -25,13 +25,13 @@
         flex-direction: column;
       }
 
-      .input-group {
-        /* padding: 5px; */
+      textarea {
+        resize: none;
       }
 
-      /* .container {
-        margin: 0 auto;
-      } */
+      .input-group {
+        margin-top: 5px;
+      }
 
       .bar {
         width:100%;
@@ -71,36 +71,38 @@
               </tr>
               <tr>
                 <div class="input-group">
-                  <textarea type="text" cols="51" rows="5" WRAP="SOFT" name="objetivo" size="51" class="form-control" placeholder="Objetivo" aria-describedby="basic-addon1"></textarea>
+                  <textarea type="text" cols="51" rows="3" WRAP="SOFT" name="objetivo" class="form-control" placeholder="Objetivo" aria-describedby="basic-addon1"></textarea>
                 </div>
               </tr>
               <tr>
                 <div class="input-group">
-                  <textarea type="text" cols="51" rows="5" WRAP="SOFT" name="contexto" size="51" class="form-control" placeholder="Contexto" aria-describedby="basic-addon1"></textarea>
+                  <textarea type="text" cols="51" rows="3" WRAP="SOFT" name="contexto" size="51" class="form-control" placeholder="Contexto" aria-describedby="basic-addon1"></textarea>
                 </div>
               </tr>
               <tr>
                 <div class="input-group">
-                  <textarea type="text" cols="51" rows="5" WRAP="SOFT" name="atores" size="51" class="form-control" placeholder="Atores" aria-describedby="basic-addon1"></textarea>
+                  <textarea type="text" cols="51" rows="3" WRAP="SOFT" name="atores" size="51" class="form-control" placeholder="Atores" aria-describedby="basic-addon1"></textarea>
                 </div>
               </tr>
               <tr>
                 <div class="input-group">
-                  <textarea type="text" cols="51" rows="5" WRAP="SOFT" name="recursos" size="51" class="form-control" placeholder="Recursos" aria-describedby="basic-addon1"></textarea>
+                  <textarea type="text" cols="51" rows="3" WRAP="SOFT" name="recursos" size="51" class="form-control" placeholder="Recursos" aria-describedby="basic-addon1"></textarea>
                 </div>
               </tr>
               <tr>
                 <div class="input-group">
-                  <textarea type="text" cols="51" rows="5" WRAP="SOFT" name="excecao" size="51" class="form-control" placeholder="Exceção" aria-describedby="basic-addon1"></textarea>
+                  <textarea type="text" cols="51" rows="2" WRAP="SOFT" name="excecao" size="51" class="form-control" placeholder="Exceção" aria-describedby="basic-addon1"></textarea>
                 </div>
               </tr>
               <tr>
                 <div class="input-group">
-                  <textarea type="text" cols="51" rows="5" WRAP="SOFT" name="episodios" size="51" class="form-control" placeholder="Episódios" aria-describedby="basic-addon1"></textarea>
+                  <textarea type="text" cols="51" rows="3" WRAP="SOFT" name="episodios" size="51" class="form-control" placeholder="Episódios" aria-describedby="basic-addon1"></textarea>
                 </div>
               </tr>
               <tr>
-                  <td align="center" colspan="2" height="60"><input name="submit" type="submit" onClick="return TestarBranco(this.form);" value="Adicionar Cenário"></td>
+                <button type="button" style="width: 25%; margin: 10px;" class="btn btn-default" aria-label="Left Align">
+                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Adicionar Cenário
+                </button>
               </tr>
             </table>
           </form>
