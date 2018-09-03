@@ -1,5 +1,6 @@
 # Lexit
 
+![](https://user-images.githubusercontent.com/18387694/44986788-4dfb4e00-af5b-11e8-88a3-8ca12cebc261.jpg)
 
 The directory holding the manifest file can be added as an extension in developer mode in its current state.
 
