@@ -3,71 +3,34 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="styles/base.css">
   </head>
   <body>
     <!-- <button id="changeColor"></button> -->
-    <div class="bar">
+    <!-- <div class="bar">
       <button id="buttonScenario" class="bar-item">Cenário</button>
       <button id="buttonLexicon" class="bar-item">Léxico</button>
     </div>
-    <div class="container">
+    <div class="container"> -->
 
       <div class="tab-content">
         <div id="scenario">
-          <h1>Cenário</h1>
-          <form action="" method="post">
-            <table>
-              <tr>
-                <div class="input-group">
-                  <input type="text" name="scenario_name" size="51" class="form-control" placeholder="Nome Cenário" aria-describedby="basic-addon1">
-                </div>
-              </tr>
-              <tr>
-                <div class="input-group">
-                  <input type="text" name="linkscenario" size="51" class="form-control" placeholder="Link Cenárioo" aria-describedby="basic-addon1">
-                </div>
-              </tr>
-              <tr>
-                <div class="input-group">
-                  <input type="text" name="link_file" size="51" class="form-control" placeholder="Link Arquivo" aria-describedby="basic-addon1">
-                </div>
-              </tr>
-              <tr>
-                <button type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
-                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Linkar Cenário
-                </button>
-              </tr>
-            </table>
-          </form>
-        </div>
-        <div id="lexicon" style="display:none">
-          <h1>Léxico</h1>
-          <form method="post" onSubmit="">
-            <table>
-              <tr>
-                <div class="input-group">
-                  <input type="text" name="name_lexicon" size="51" class="form-control" placeholder="Nome Léxico" aria-describedby="basic-addon1">
-                </div>
-              </tr>
-              <tr>
-                <div class="input-group">
-                  <input type="text" name="link_lexicon" size="51" class="form-control" placeholder="Link Léxicon" aria-describedby="basic-addon1">
-                </div>
-              </tr>
-              <tr>
-                <div class="input-group">
-                  <input type="text" name="link_file" size="51" class="form-control" placeholder="Link Arquivo" aria-describedby="basic-addon1">
-                </div>
-              </tr>
-              <tr>
-                <button type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
-                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Linkar Léxico
-                </button>
-              </tr>
-            </table>
+          <h1>Cenário/Léxico</h1>
+          <form action="localhost:3000" method="post">
+            <div class="input-group">
+              <input type="text" name="scenario_name" size="51" class="form-control" placeholder="Nome Cenário" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+              <input type="text" name="linkscenario" size="51" class="form-control" placeholder="Link Cenário" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+              <textarea type="text" cols="50" rows="3" WRAP="SOFT" name="recursos" size="51" class="form-control" placeholder="Texto" aria-describedby="basic-addon1"></textarea>
+            </div>
+            <button id="formact" type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
+              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Formatar Cenário
+            </button>
           </form>
         </div>
       </div>
