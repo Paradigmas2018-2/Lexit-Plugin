@@ -49,47 +49,22 @@
             <table>
               <tr>
                 <div class="input-group">
-                  <input type="text" name="nome" size="51" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+                  <input type="text" name="name_lexicon" size="51" class="form-control" placeholder="Nome Léxico" aria-describedby="basic-addon1">
                 </div>
               </tr>
               <tr>
                 <div class="input-group">
-                  <input size="51" type="text" name="sinonimo" class="form-control" placeholder="Sinônimos" aria-describedby="basic-addon1">
-                </div>
-                <div class="button-list">
-                  <button id="addSinonimo" type="button" style="width: 50%; margin: 5px;" class="btn btn-success" aria-label="">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Adicionar
-                  </button>
-                  <button id="delSinonimo" type="button" style="width: 50%; margin: 5px;" class="btn btn-danger" aria-label="">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remover
-                  </button>
+                  <input type="text" name="link_lexicon" size="51" class="form-control" placeholder="Link Léxicon" aria-describedby="basic-addon1">
                 </div>
               </tr>
               <tr>
-                 <select multiple name="listSinonimo[]" style="width: 450px;"  size="5"></select>
-               </tr>
-               <tr>
-                    <div class="input-group">
-                      <textarea type="text" name="nocao"cols="51" size="51" rows="3" class="form-control" placeholder="Noção" aria-describedby="basic-addon1"></textarea>
-                    </div>
-                </tr>
-              <tr>
-                  <div class="input-group">
-                    <textarea type="text" name="impacto"cols="51" size="51" rows="3" class="form-control" placeholder="Impacto" aria-describedby="basic-addon1"></textarea>
-                  </div>
-              </tr>
-              <tr>
-                <span>Classificação</span>
-                <select id='classificacao' name='classificacao' size=1 width="300" placeholder="Classificação">
-                 <option value='sujeito' selected>Sujeito</option>
-                 <option value='objeto'>Objeto</option>
-                 <option value='verbo'>Verbo</option>
-                 <option value='estado'>Estado</option>
-               </select>
+                <div class="input-group">
+                  <input type="text" name="link_file" size="51" class="form-control" placeholder="Link Arquivo" aria-describedby="basic-addon1">
+                </div>
               </tr>
               <tr>
                 <button type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
-                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Adicionar Léxico
+                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Linkar Léxico
                 </button>
               </tr>
             </table>
