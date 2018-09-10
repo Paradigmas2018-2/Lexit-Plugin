@@ -3,8 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/base.css">
   </head>
   <body>
@@ -18,23 +18,31 @@
       <div class="tab-content">
         <div id="scenario">
           <h1>Cenário/Léxico</h1>
-          <form action="localhost:3000" method="post">
             <div class="input-group">
-              <input type="text" name="scenario_name" size="51" class="form-control" placeholder="Nome Cenário" aria-describedby="basic-addon1">
+              <input id="name-input" type="text" name="scenario_name" size="51" class="form-control" placeholder="Nome" aria-describedby="basic-addon1">
             </div>
             <div class="input-group">
-              <input type="text" name="linkscenario" size="51" class="form-control" placeholder="Link Cenário" aria-describedby="basic-addon1">
+              <input id="link-input" type="text" name="linkscenario" size="51" class="form-control" placeholder="Link" aria-describedby="basic-addon1">
             </div>
             <div class="input-group">
-              <textarea type="text" cols="50" rows="3" WRAP="SOFT" name="recursos" size="51" class="form-control" placeholder="Texto" aria-describedby="basic-addon1"></textarea>
+              <textarea id="body-input" type="text" cols="50" rows="3" WRAP="SOFT" name="recursos" size="51" class="form-control" placeholder="Texto" aria-describedby="basic-addon1"></textarea>
             </div>
-            <button id="formact" type="button" style="width: 25%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
-              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Formatar Cenário
+            <button id="formact" type="button" style="width: 40%; margin: 10px;" class="btn btn-success" aria-label="Left Align">
+              <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> Formatar Texto
             </button>
-          </form>
+            <div class="input-group">
+              <textarea id="response-output" type="text" cols="50" rows="10" WRAP="SOFT" name="recursos" size="51" class="form-control" placeholder="" aria-describedby="basic-addon1"></textarea>
+            </div>
         </div>
       </div>
     </div>
+    <style>
+      body {  
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    </style>
 
     <script src="./popup_files/popup.js"></script>
 

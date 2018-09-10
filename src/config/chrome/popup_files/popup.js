@@ -3,65 +3,82 @@
 // let changeColor = document.getElementById('changeColor');
 let buttonFormact = document.getElementById('formact');
 
-function post(path, params, method) {
-  method = method || "post"; // Set method to post by default if not specified.
+let nameInput = document.getElementById('name-input');
+let linkInput = document.getElementById('link-input');
+let bodyInput = document.getElementById('body-input');
 
-  // The rest of this code assumes you are not using a library.
-  // It can be made less wordy if you use one.
-  var form = document.createElement("form");
-  form.setAttribute("method", method);
-  form.setAttribute("action", path);
+let responseOutput = document.getElementById('response-output');
 
-  for(var key in params) {
-      if(params.hasOwnProperty(key)) {
-          var hiddenField = document.createElement("input");
-          hiddenField.setAttribute("type", "hidden");
-          hiddenField.setAttribute("name", key);
-          hiddenField.setAttribute("value", params[key]);
+buttonFormact.onclick = function(element) {
+  console.log('teste')
+  if (ValidatesNameInput() && ValidatesLinkInput() && ValidatesBodyInput()) {
 
-          form.appendChild(hiddenField);
+    $.ajax({
+      url: 'http://192.168.43.39:4000/convert_text',
+      headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      type: "POST", /* or type:"GET" or type:"PUT" */
+      dataType: "json",
+      data: 
+      {
+        "data": {
+          "lexicon":{
+            "name": nameInput.value, 
+            "link": linkInput.value
+          }, 
+          "text":{
+            "content": bodyInput.value
+          }
+        }
+      },
+      success: function (result) {
+          console.log(result); 
+          responseOutput.value = result.result  
+      },
+      error: function () {
+          console.log("error");
       }
+    });
   }
+}
+  
+function ValidatesNameInput() {
 
-  document.getElementById('scenario').appendChild(form);
-  console.log('teste')
-  form.submit();
+  if( nameInput.value == "" ) {
+	  alert (" Por favor, forneça o NOME.\n O campo NOME é de preenchimento obrigatório.");
+      return false;
+    } else {
+		var padrao = /[\\\/\?"<>:|]/;
+		var nOK = padrao.exec(nameInput.value);
+		if (nOK) {
+			window.alert ("O nome não pode conter nenhum dos seguintes caracteres:   / \\ : ? \" < > |");
+			linkInput.focus();
+			return false;
+    }
+    return true;
+	}
 }
 
-buttonSubmitLexicon.onclick = function(element) {
-  console.log('teste')
-  post('/contact/', {name: 'Johnny Bravo'});
+function ValidatesLinkInput() {
+
+  if( linkInput.value == "" ) {
+	  alert (" Por favor, forneça o LINK.\n O campo LINK é de preenchimento obrigatório.");
+      return false;
+    } else {
+    return true;
+	}
 }
 
-// function TestarBranco() {
+function ValidatesBodyInput() {
 
-//   var form = document.forms[1];
-//   var nome  = form.nome.value;
-//   var nocao = form.nocao.value;
-
-//   if( nome == "" )
-//     {
-// 	  alert (" Por favor, forneça o NOME do léxico.\n O campo NOME é de preenchimento obrigatório.");
-//       form.nome.focus();
-//       return false;
-//     }else{
-// 		padrao = /[\\\/\?"<>:|]/;
-// 		var nOK = padrao.exec(nome);
-// 		if (nOK)
-// 		{
-// 			window.alert ("O nome do léxico não pode conter nenhum dos seguintes caracteres:   / \\ : ? \" < > |");
-// 			form.nome.focus();
-// 			return false;
-// 		}
-// 	}
-
-//    if( nocao == "" )
-//     { alert (" Por favor, forneça a NOÇÂO do léxico.\n O campo NOÇÂO É de preenchimento obrigatório.");
-//       form.nocao.focus();
-//       return false;
-//     }
-
-// }
+  if( bodyInput.value == "" ) {
+	  alert (" Por favor, forneça o TEXTO.\n O campo TEXTO é de preenchimento obrigatório.");
+      return false;
+    } else {
+    return true;
+	}
+}
 
 // function addSinonimo() {
 //   var listSinonimo = document.forms[1].elements['listSinonimo[]'];
