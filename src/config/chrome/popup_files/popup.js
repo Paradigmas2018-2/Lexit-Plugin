@@ -1,6 +1,5 @@
 'use strict';
 
-// let changeColor = document.getElementById('changeColor');
 let buttonFormact = document.getElementById('formact');
 
 let nameInput = document.getElementById('name-input');
@@ -18,7 +17,7 @@ buttonFormact.onclick = function(element) {
       headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
       },
-      type: "POST", /* or type:"GET" or type:"PUT" */
+      type: "POST",
       dataType: "json",
       data: 
       {
@@ -79,62 +78,3 @@ function ValidatesBodyInput() {
     return true;
 	}
 }
-
-// function addSinonimo() {
-//   var listSinonimo = document.forms[1].elements['listSinonimo[]'];
-
-//   if(document.forms[1].sinonimo.value == "")
-//   	return;
-
-//   var sinonimo = document.forms[1].sinonimo.value;
-//   var padrao = /[\\\/\?"<>:|]/;
-//   var nOK = padrao.exec(sinonimo);
-//   if (nOK) {
-//   	window.alert ("O sin�nimo do l�xico n�o pode conter nenhum dos seguintes caracteres:   / \\ : ? \" < > |");
-//   	document.forms[1].sinonimo.focus();
-//   	return;
-//   }
-
-//   listSinonimo.options[listSinonimo.length] = new Option(document.forms[1].sinonimo.value, document.forms[1].sinonimo.value);
-
-//   document.forms[1].sinonimo.value = "";
-
-//   document.forms[1].sinonimo.focus();
-
-// }
-
-// function delSinonimo() {
-//   var listSinonimo = document.forms[1].elements['listSinonimo[]'];
-
-//   if(listSinonimo.selectedIndex == -1)
-//     return;
-//   else
-
-//   listSinonimo.options[listSinonimo.selectedIndex] = null;
-
-//   delSinonimo();
-// }
-
-
-// chrome.storage.sync.get('color', function(data) {
-//   changeColor.style.backgroundColor = data.color;
-//   changeColor.setAttribute('value', data.color);
-// });
-
-// changeColor.onclick = function(element) {
-//    let color = element.target.value;
-//    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//      chrome.tabs.executeScript(
-//          tabs[0].id,
-//          {code: 'document.body.style.backgroundColor = "' + color + '";'
-//
-//
-//           }
-//
-//       );
-//    });
-//  };
-//
-// var e = document.createElement('span');
-// e.innerHTML = htmldata;
-// element.appendChild(e);
